@@ -86,3 +86,22 @@ const ConstMap<std::string,int> FontStyle = ConstMap<std::string,int>
     ("Regular", 0)
     ("Italic",  cv::FONT_ITALIC);
 #endif
+
+/**************************************************************\
+*                  Helper Macros & Functions                   *
+\**************************************************************/
+
+/// set or clear a bit in flag depending on bool value
+#define UPDATE_FLAG(NUM, TF, BIT)       \
+    do {                                \
+        if ((TF)) { (NUM) |=  (BIT); }  \
+        else      { (NUM) &= ~(BIT); }  \
+    } while(0)
+
+/// Alias for input/output arguments number check
+inline void nargchk(bool cond)
+{
+    if (!cond) {
+        mexErrMsgIdAndTxt("mexopencv:error", "Wrong number of arguments");
+    }
+}
