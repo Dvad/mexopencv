@@ -1,4 +1,4 @@
-MATLABDIR   ?= /usr/local/matlab
+MATLABDIR   ?= /usr/local/MATLAB/MATLAB_Production_Server/R2015a/
 MEX         ?= $(MATLABDIR)/bin/mex
 MATLAB      ?= $(MATLABDIR)/bin/matlab
 MEXEXT      ?= $(shell $(MATLABDIR)/bin/mexext)
