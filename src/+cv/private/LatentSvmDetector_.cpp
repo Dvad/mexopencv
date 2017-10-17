@@ -15,12 +15,6 @@ int last_id = 0;
 /// Object container
 map<int,LatentSvmDetector> obj_;
 
-/// Alias for argument number check
-inline void nargchk(bool cond)
-{
-    if (!cond)
-        mexErrMsgIdAndTxt("mexopencv:error","Wrong number of arguments");
-}
 
 /** Convert object detections to struct array
  * @param vo vector of detections
@@ -55,7 +49,7 @@ void mexFunction( int nlhs, mxArray *plhs[],
     vector<MxArray> rhs(prhs,prhs+nrhs);
     int id = rhs[0].toInt();
     string method(rhs[1].toString());
-    
+
     // Constructor call
     if (method == "new") {
         nargchk(nlhs<=1 && nrhs<=4);
@@ -65,7 +59,7 @@ void mexFunction( int nlhs, mxArray *plhs[],
         plhs[0] = MxArray(last_id);
         return;
     }
-    
+
     // Big operation switch
     LatentSvmDetector& obj = obj_[id];
     if (method == "delete") {

@@ -22,12 +22,6 @@ const ConstMap<std::string,cvflann::flann_centers_init_t> CentersInit =
     ("Gonzales", cvflann::FLANN_CENTERS_GONZALES)
     ("KMeansPP", cvflann::FLANN_CENTERS_KMEANSPP);
 
-/// Check number of arguments
-void nargchk(bool cond)
-{
-    if (!cond)
-        mexErrMsgIdAndTxt("mexopencv:error","Wrong number of arguments");
-}
 
 /// Create a new index parameters
 Ptr<flann::IndexParams> createIndexParams(const MxArray& m)
@@ -202,7 +196,7 @@ void mexFunction( int nlhs, mxArray *plhs[],
                   int nrhs, const mxArray *prhs[] )
 {
     nargchk(nrhs>=2 && nlhs<=1);
-    
+
     // Determine argument format between constructor or (id,method,...)
     vector<MxArray> rhs(prhs,prhs+nrhs);
     int id = rhs[0].toInt();
@@ -210,7 +204,7 @@ void mexFunction( int nlhs, mxArray *plhs[],
 
     if (last_id==0)
         initModule_nonfree();
-    
+
     // Big operation switch
     if (method == "new") {
         nargchk(nrhs>=3);
@@ -349,7 +343,7 @@ void mexFunction( int nlhs, mxArray *plhs[],
                 else
                     mexErrMsgIdAndTxt("mexopencv:error","Unrecognized option");
             }
-            obj->radiusMatch(queryDescriptors, trainDescriptors, matches, 
+            obj->radiusMatch(queryDescriptors, trainDescriptors, matches,
                 maxDistance, mask, compactResult);
         }
         else { // Second format

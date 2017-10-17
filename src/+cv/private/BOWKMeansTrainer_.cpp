@@ -20,13 +20,6 @@ const ConstMap<std::string,int> Initialization = ConstMap<std::string,int>
     ("Random",KMEANS_RANDOM_CENTERS)
     ("PP",KMEANS_PP_CENTERS);
 
-/// Alias for argument number check
-inline void nargchk(bool cond)
-{
-    if (!cond)
-        mexErrMsgIdAndTxt("mexopencv:error","Wrong number of arguments");
-}
-
 }
 
 /**
@@ -43,7 +36,7 @@ void mexFunction( int nlhs, mxArray *plhs[],
     vector<MxArray> rhs(prhs,prhs+nrhs);
     int id = rhs[0].toInt();
     string method(rhs[1].toString());
-    
+
     // Constructor call
     if (method == "new") {
         nargchk(nrhs>=3 && (nrhs%2)==1 && nlhs<=1);
@@ -68,7 +61,7 @@ void mexFunction( int nlhs, mxArray *plhs[],
         plhs[0] = MxArray(last_id);
         return;
     }
-    
+
     // Big operation switch
     BOWKMeansTrainer& obj = obj_.find(id)->second;
     if (method == "delete") {
