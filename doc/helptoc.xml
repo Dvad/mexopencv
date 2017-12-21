@@ -269,6 +269,15 @@
           <tocitem image="HelpIcon.FUNCTION" target="matlab/cv.decomposeHomographyMat.html">cv.decomposeHomographyMat</tocitem>
           <tocitem image="HelpIcon.FUNCTION" target="matlab/cv.StereoBM.html">cv.StereoBM</tocitem>
           <tocitem image="HelpIcon.FUNCTION" target="matlab/cv.StereoSGBM.html">cv.StereoSGBM</tocitem>
+          <tocitem image="HelpIcon.FUNCTION" target="matlab/cv.fisheyeProjectPoints.html">cv.fisheyeProjectPoints</tocitem>
+          <tocitem image="HelpIcon.FUNCTION" target="matlab/cv.fisheyeDistortPoints.html">cv.fisheyeDistortPoints</tocitem>
+          <tocitem image="HelpIcon.FUNCTION" target="matlab/cv.fisheyeUndistortPoints.html">cv.fisheyeUndistortPoints</tocitem>
+          <tocitem image="HelpIcon.FUNCTION" target="matlab/cv.fisheyeInitUndistortRectifyMap.html">cv.fisheyeInitUndistortRectifyMap</tocitem>
+          <tocitem image="HelpIcon.FUNCTION" target="matlab/cv.fisheyeUndistortImage.html">cv.fisheyeUndistortImage</tocitem>
+          <tocitem image="HelpIcon.FUNCTION" target="matlab/cv.fisheyeEstimateNewCameraMatrixForUndistortRectify.html">cv.fisheyeEstimateNewCameraMatrixForUndistortRectify</tocitem>
+          <tocitem image="HelpIcon.FUNCTION" target="matlab/cv.fisheyeCalibrate.html">cv.fisheyeCalibrate</tocitem>
+          <tocitem image="HelpIcon.FUNCTION" target="matlab/cv.fisheyeStereoRectify.html">cv.fisheyeStereoRectify</tocitem>
+          <tocitem image="HelpIcon.FUNCTION" target="matlab/cv.fisheyeStereoCalibrate.html">cv.fisheyeStereoCalibrate</tocitem>
         </tocitem>
         <tocitem target="matlab/index_cat.html#features2d">features2d: 2D Features Framework
           <tocitem image="HelpIcon.FUNCTION" target="matlab/cv.KeyPointsFilter.html">cv.KeyPointsFilter</tocitem>

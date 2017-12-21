@@ -1,5 +1,5 @@
 % mexopencv
-% Version 3.3.1 (R2017a) 26-November-2017
+% Version 3.3.1 (R2017a) 21-December-2017
 %
 %% opencv: Main Modules
 %
@@ -248,6 +248,15 @@
 %   cv.decomposeHomographyMat           - Decompose a homography matrix to rotation(s), translation(s) and plane normal(s)
 %   cv.StereoBM                         - Class for computing stereo correspondence using the block matching algorithm
 %   cv.StereoSGBM                       - Class for computing stereo correspondence using the semi-global block matching algorithm
+%   cv.fisheyeProjectPoints             - Projects points using fisheye model
+%   cv.fisheyeDistortPoints             - Distorts 2D points using fisheye model
+%   cv.fisheyeUndistortPoints           - Undistorts 2D points using fisheye model
+%   cv.fisheyeInitUndistortRectifyMap   - Computes undistortion and rectification maps (fisheye)
+%   cv.fisheyeUndistortImage            - Transforms an image to compensate for fisheye lens distortion
+%   cv.fisheyeEstimateNewCameraMatrixForUndistortRectify - Estimates new camera matrix for undistortion or rectification (fisheye)
+%   cv.fisheyeCalibrate                 - Performs camera calibaration (fisheye)
+%   cv.fisheyeStereoRectify             - Stereo rectification for fisheye camera model (fisheye)
+%   cv.fisheyeStereoCalibrate           - Performs stereo calibration (fisheye)
 %
 % features2d: 2D Features Framework
 %   cv.KeyPointsFilter                  - Methods to filter a vector of keypoints
